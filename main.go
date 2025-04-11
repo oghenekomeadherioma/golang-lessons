@@ -57,4 +57,25 @@ func main() {
 	fmt.Println("Textio is increasing the maximum message length from", maxMessageLength, "to", newMaxMessageLength, "characters.")
 }
 
-// 9th April, 2025
+// 11th April, 2025
+// users of compiled languages you dont need access to the source code 
+// fibonacci series with golang 
+package main 
+
+import "fmt"
+
+func main(){
+	var n int 
+	fmt.Print("Enter the number of Fibonacci terms: ")
+    fmt.Scan(&n)
+
+    a, b := 0, 1
+
+    fmt.Println("Fibonacci Series:")
+
+    for i := 0; i < n; i++ {
+        fmt.Print(a, " ")
+        a, b = b, a+b
+    }
+}
+
