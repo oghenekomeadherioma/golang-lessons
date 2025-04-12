@@ -79,3 +79,19 @@ func main(){
     }
 }
 
+//12th april 2025 
+// working with numbers in go use int,uint,float64
+/* today's agenda involves formatting the strings in go*/
+package main
+
+import "fmt"
+
+func main() {
+	const name = "Mustapha"
+	const openRate = 30.5563
+	const checkSpace= 56.032
+	const message = "like to calculate your previous expenses?"
+	msg := fmt.Sprintf("Hi %s, your open rate is %.2f percent\n and your checkspace is %f, would you %s" , name,openRate,checkSpace,message)
+
+	fmt.Print(msg)
+}
