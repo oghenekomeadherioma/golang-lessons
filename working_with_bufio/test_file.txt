@@ -1,0 +1,3 @@
+Some dummy text
+to test working with bufio
+Reading and printing bytes
