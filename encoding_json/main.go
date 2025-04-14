@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 	"encoding/json"
-	"time"
+	"io"
 )
 
 func main() {
@@ -16,7 +16,16 @@ func main() {
 		panic(err)
 	}
 
-	segun_file := os.WriteFile(segun_details)
+	segun_file, err := os.Create("segun_details.json")
+	if err != nil {
+		fmt.Print("Err: ", err)
+		return
+	}
+	_, err = io.WriteString(segun_file, string(segun_details))
+	if err != nil {
+		panic(err)
+	}
+
 }
 
 type school struct {
