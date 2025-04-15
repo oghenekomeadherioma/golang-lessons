@@ -96,7 +96,7 @@ func main() {
 	fmt.Print(msg)
 }
 // 13th April 2025
-/* testing runes and characters in go, did you know that you could put emojis directly in the programming language? soo cooollll!!*/
+/* testing runes and characters in go, did you know that you could put emojis directly in the programming language? soo cooollll!!*/ 
 package main
 
 import (
@@ -111,3 +111,24 @@ func main() {
 	fmt.Println("=====================================")
 	fmt.Printf("Hi %s, so good to have you back in the arcanum\n", name)
 }
+
+// 15th april 2025
+// conditionals, using message length as a case study
+package main
+
+import "fmt"
+
+func main() {
+	messageLen := 10
+	maxMessageLen := 20
+	fmt.Println("Trying to send a message of length:", messageLen, "and a max length of:", maxMessageLen)
+
+	// don't touch above this line
+
+	if messageLen <= maxMessageLen {
+		fmt.Println("Message sent")
+	} else {
+		fmt.Println("Message not sent")
+	}
+}
+
