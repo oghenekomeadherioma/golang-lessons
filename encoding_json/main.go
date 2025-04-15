@@ -21,10 +21,25 @@ func main() {
 		fmt.Print("Err: ", err)
 		return
 	}
-	_, err = io.WriteString(segun_file, string(segun_details))
+
+	next_file, err := os.Create("next_file.txt")
+
 	if err != nil {
 		panic(err)
 	}
+
+	segundo, err := io.WriteString(segun_file, string(segun_details))
+	if err != nil {
+		panic(err)
+	}
+
+	_, err = io.Copy(segun_file, next_file )
+	if err != nil {
+		fmt.Println(err)
+	}
+	//fmt.Fprint(file_copy)
+
+fmt.Println(segundo)
 
 }
 
