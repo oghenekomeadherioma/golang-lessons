@@ -131,3 +131,40 @@ func main() {
 	}
 }
 
+//16th april 2025
+// a simple calculator with go 
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var num1, num2 float64
+
+	fmt.Println("Simple Calculator - Addition and Multiplication")
+	fmt.Print("Enter first number: ")
+	fmt.Scanln(&num1)
+
+	fmt.Print("Enter second number: ")
+	fmt.Scanln(&num2)
+
+	sum := num1 + num2
+	product := num1 * num2
+
+	fmt.Printf("Addition: %.2f + %.2f = %.2f\n", num1, num2, sum)
+	fmt.Printf("Multiplication: %.2f * %.2f = %.2f\n", num1, num2, product)
+}
+
+
+// playing around with calculators again 
+package main
+
+import "fmt"
+
+func main() {
+	for i := 1; i <= 5; i++ {
+		square := i * i
+		fmt.Printf("Square of %d is %d\n", i, square)
+	}
+}
