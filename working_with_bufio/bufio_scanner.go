@@ -7,5 +7,5 @@ import (
 
 func main() {
 	input := os.Args[1:]
-	print := bufio.NewScanner(input)
+	print := bufio.NewReader(input[1])
 }
