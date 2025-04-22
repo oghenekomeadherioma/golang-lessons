@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import  ("fmt"
+		"unicode/utf8"
+
+)
 
 func main() {
 	messageStart:= "Happy birthday! you are now"
@@ -8,25 +11,8 @@ func main() {
 	messageEnd:= "years old!"
 
 	fmt.Println(messageStart, age, messageEnd)
-}
-// idea was to join the different formats together using the fmt operation and the walrus operator to produce a readable output 
-// walrus operator can only be used in a function but the var can be used out of a function
-
-package main
-
-import "fmt"
-
-func main() {
 	fmt.Println("Starting Textio server...")
-}
 
-// this function involved the main function for printing an output unto the screen for the basics of the go language and syntax
-
-package main
-
-import "fmt"
-
-func main() {
 	// initialize variables here
 	var smsSendingLimit int
 	var costPerSMS float64
@@ -34,19 +20,7 @@ func main() {
 	var username string
 
 	fmt.Printf("%v %.2f %v %q\n", smsSendingLimit, costPerSMS, hasPermission, username)
-}
 
-// bringing out the variables listing out the variables and their coresponding functions
-
-//fixing a bug for the codes 
-
-/* Multiline comments come in this format
-so now you can have multiple lines of code i fixed the bug in this sample */
-package main
-
-import "fmt"
-
-func main() {
 	/*
 		We are increasing the maximum message length from 140 to 280 characters.
 		Very reluctantly, I might add.
@@ -55,16 +29,23 @@ func main() {
 	maxMessageLength := 140
 	newMaxMessageLength := 280
 	fmt.Println("Textio is increasing the maximum message length from", maxMessageLength, "to", newMaxMessageLength, "characters.")
+	const name = "Mustapha"
+	const openRate = 30.5563
+	const checkSpace= 56.032
+	const message = "like to calculate your previous expenses?"
+	msg := fmt.Sprintf("Hi %s, your open rate is %.2f percent\n and your checkspace is %f, would you %s" , name,openRate,checkSpace,message)
+
+	fmt.Print(msg)
+	Fibonacci()
+	arcanum()
+
 }
+// idea was to join the different formats together using the fmt operation and the walrus operator to produce a readable output
+// walrus operator can only be used in a function but the var can be used out of a function
 
-// 11th April, 2025
-// users of compiled languages you dont need access to the source code 
-// fibonacci series with golang 
-package main 
 
-import "fmt"
 
-func main(){
+func Fibonacci(){
 	var n int 
 	fmt.Print("Enter the number of Fibonacci terms: ")
     fmt.Scan(&n)
@@ -82,29 +63,13 @@ func main(){
 //12th april 2025 
 // working with numbers in go use int,uint,float64
 /* today's agenda involves formatting the strings in go*/
-package main
 
-import "fmt"
 
-func main() {
-	const name = "Mustapha"
-	const openRate = 30.5563
-	const checkSpace= 56.032
-	const message = "like to calculate your previous expenses?"
-	msg := fmt.Sprintf("Hi %s, your open rate is %.2f percent\n and your checkspace is %f, would you %s" , name,openRate,checkSpace,message)
-
-	fmt.Print(msg)
-}
 // 13th April 2025
 /* testing runes and characters in go, did you know that you could put emojis directly in the programming language? soo cooollll!!*/
-package main
 
-import (
-	"fmt"
-	"unicode/utf8"
-)
 
-func main() {
+func arcanum() {
 	const name = "🐻"
 	fmt.Printf("constant 'name' byte length: %d\n", len(name))
 	fmt.Printf("constant 'name' rune length: %d\n", utf8.RuneCountInString(name))
