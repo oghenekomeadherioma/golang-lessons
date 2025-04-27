@@ -1,18 +1,19 @@
 package main
 
 import (
-	"fmt"
 	"context"
+	"fmt"
 )
 
 func main() {
 	ctx := context.Background()
 	ctx, cancel := context.WithCancel(ctx)
-	defer cancel
+	defer cancel()
 
 	go func() {
 		select {
-		case <- ctx.Done: fmt.Println("Context is Done/Cancelled")
+		case <-ctx.Done():
+			fmt.Println("Context is Done/Cancelled")
 		}
 
 	}()
