@@ -14,6 +14,7 @@ func main() {
 		select {
 		case <-ctx.Done():
 			fmt.Println("Context is Done/Cancelled")
+			cancel()
 		}
 
 	}()
