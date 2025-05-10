@@ -1,9 +1,10 @@
-package main  
+package main
+
 import (
+	"flag"
 	"fmt"
 	"log"
 	"os"
-	"flag"
 )
 
 func main() {

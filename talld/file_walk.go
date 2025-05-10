@@ -1,8 +1,9 @@
 package main
+
 import (
-	"os"
-	"log"
 	"fmt"
+	"log"
+	"os"
 )
 
 func main() {}
